@@ -40,3 +40,17 @@ plot(x,y,'.','MarkerSize',25); hold on
 plot(z,y1); hold off
 
 P = slope*17 + intercept
+
+%% 4
+
+clc;clear;clear all;
+format long
+x = [0 4 8 10 16 18 24 28 29 32 34 38 40];
+y = [14.6210 12.9100 11.8430 11.4100 9.8700 9.5210 8.4180 7.7010 7.3810 7.3050 6.9650 6.5200 6.4130];
+z = linspace(x(1),x(end),10000);
+y1 = 1.51*exp(-z) - 0.18*z + 13.1;
+plot(x,y,'.','MarkerSize',25); hold on
+plot(z,y1); hold off
+ylabel("Disolved Oxygen (mg/L)")
+xlabel("Tempature (C)")
+title("Sea-Level Concentration of Dissolved Oxygen for Fresh Water")
