@@ -70,8 +70,13 @@ format long
 f = @(x) exp((-x.^2)/2)/sqrt(2*pi());
 
 
-exact = integral(f,-1,1)
+exact = integral(f,-1,1);
 
+<<<<<<< Updated upstream
 approx_e = myTrap(f,-1,1,128);
 err_e = abs(exact - approx_e)
 >>>>>>> 3af70cf0a9033dd53b8859aad17fa96f8d5b8bc5
+=======
+approx_e = myTrap(f,-1,1,164)
+err_e = abs(exact - approx_e)
+>>>>>>> Stashed changes
