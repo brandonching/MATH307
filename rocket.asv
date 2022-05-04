@@ -1,0 +1,22 @@
+function dy = rocket(t,w)
+C_d =0.75;
+rho = 1.225;
+A=pi()*0.0208^2;
+
+F_prop = [];
+m=[];
+for t=t
+   if (t<=0.26)
+       F_prop = [F_prop 60*t];
+       m = [m -0.01515];
+   elseif (T<=1.65)
+       F_prop = [F_prop 15];
+       m = [m -0.01515];
+end
+
+dy = zeros(2,1);
+
+dy(1) = w(1);
+dy(2) = F_prop(t)/m(t) - 9.81 - (0.5*C_d*rho*A*w(2)^2*sin(w(2)))/m(t);
+
+end
