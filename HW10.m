@@ -50,4 +50,8 @@ title("Predator-Prey Competing for Same Resources")
 legend("x(t) Species X" , "y(t) Species Y")
 
 %% 5
-[t,w] = ode45(@rocket,[0 15],[0 0 0.1536]);
+[t,y] = ode45(@rocket,[0 15],[0 0 0.1536]);
+plot(t,y(:,2),"-o")
+xlabel("Time")
+ylabel("Height (m)")
+title("Rocket Height")
